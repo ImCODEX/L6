@@ -1,3 +1,4 @@
+/*
 
 package view;
 
@@ -10,10 +11,12 @@ import java.util.List;
 import java.util.Scanner;
 
 
+*/
 /**
  * UI
  * Main method runs the user interface
- */
+ *//*
+
 public class Console {
     private final Controller controller;
     private static final String INVALID_INPUT_EXCEPTION = "Invalid input!";
@@ -24,51 +27,63 @@ public class Console {
     }
 
 
-    /**
+    */
+/**
      * Print all Courses Method
-     */
+     *//*
+
     public void showCourses() throws SQLException {
         controller.getCourses().forEach(System.out::println);
     }
 
 
-    /**
+    */
+/**
      * Print all Students Method
-     */
+     *//*
+
     public void showStudents() throws SQLException {
         controller.getStudents().forEach(System.out::println);
     }
 
 
-    /**
+    */
+/**
      * Print all Teachers Method
-     */
+     *//*
+
     public void showTeachers() throws SQLException {
         controller.getTeacher().forEach(System.out::println);
     }
 
 
-    /**
+    */
+/**
      * Print Students sorted by count(enrolledCourses) in descending order
-     */
+     *//*
+
     public void showSortStudentsByEnrolledCourses() throws SQLException {
         controller.sortStudentsByEnrolledCourses().forEach(System.out::println);
     }
 
 
-    /**
+    */
+/**
      * Print Courses sorted by credits in descending order
-     */
+     *//*
+
     public void showSortCourseByCredits() throws SQLException {
         controller.sortCourseByCredits().forEach(System.out::println);
     }
 
 
-    /**
+    */
+/**
      * Update Course Method
      *
      * @throws CustomExceptions in case of Course not found or invalid input
-     */
+     *//*
+
     public void updateCourse() throws CustomExceptions, SQLException {
         Scanner scanner = new Scanner(System.in);
         showCourses();
@@ -93,11 +108,13 @@ public class Console {
     }
 
 
-    /**
+    */
+/**
      * Update Student Method
      *
      * @throws CustomExceptions in case of Student not found or invalid input
-     */
+     *//*
+
     public void updateStudent() throws CustomExceptions, SQLException {
         Scanner scanner = new Scanner(System.in);
         showStudents();
@@ -131,11 +148,13 @@ public class Console {
     }
 
 
-    /**
+    */
+/**
      * Update Teacher Method
      *
      * @throws CustomExceptions in case of Teacher not found or invalid input
-     */
+     *//*
+
     public void updateTeacher() throws CustomExceptions, SQLException {
         Scanner scanner = new Scanner(System.in);
         showTeachers();
@@ -167,9 +186,11 @@ public class Console {
     }
 
 
-    /**
+    */
+/**
      * Add Course Method
-     */
+     *//*
+
     public void addCourse() throws CustomExceptions {
         Scanner scanner = new Scanner(System.in);
         System.out.println("You will need to write a few things that represent Course attributes.");
@@ -191,9 +212,11 @@ public class Console {
     }
 
 
-    /**
+    */
+/**
      * Add Student Method
-     */
+     *//*
+
     public void addStudent() throws CustomExceptions {
         Scanner scanner = new Scanner(System.in);
         System.out.println("You will need to write a few things that represent Student attributes.");
@@ -223,11 +246,13 @@ public class Console {
     }
 
 
-    /**
+    */
+/**
      * Teacher Add Method
      *
      * @throws CustomExceptions in case of invalid input
-     */
+     *//*
+
     public void addTeacher() throws CustomExceptions {
         Scanner scanner = new Scanner(System.in);
         System.out.println("You will need to write a few things that represent Teacher attributes.");
@@ -256,11 +281,13 @@ public class Console {
     }
 
 
-    /**
+    */
+/**
      * Course delete Method
      *
      * @throws CustomExceptions in case of invalid input
-     */
+     *//*
+
     public void deleteCourse() throws CustomExceptions, SQLException {
         Scanner scanner = new Scanner(System.in);
         showCourses();
@@ -275,11 +302,13 @@ public class Console {
     }
 
 
-    /**
+    */
+/**
      * Student delete Method
      *
      * @throws CustomExceptions in case of invalid input
-     */
+     *//*
+
     public void deleteStudent() throws CustomExceptions, SQLException {
         Scanner scanner = new Scanner(System.in);
         showStudents();
@@ -293,11 +322,13 @@ public class Console {
     }
 
 
-    /**
+    */
+/**
      * Teacher delete Method
      *
      * @throws CustomExceptions in case of invalid input
-     */
+     *//*
+
     public void deleteTeacher() throws CustomExceptions, SQLException {
         Scanner scanner = new Scanner(System.in);
         showTeachers();
@@ -311,9 +342,11 @@ public class Console {
     }
 
 
-    /**
+    */
+/**
      * filterStudentsByLessThenXCourses print Method
-     */
+     *//*
+
     public void showFilterStudentsByLessThenXCourses() throws SQLException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Students with less or equal then X enrolled courses will be show.");
@@ -323,9 +356,11 @@ public class Console {
     }
 
 
-    /**
+    */
+/**
      * filterCourseByMaxEnrollment print Method
-     */
+     *//*
+
     public void showFilterCourseByMaxEnrollment() throws SQLException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Courses with less or equal then X maximum enrollment will be show.");
@@ -335,11 +370,13 @@ public class Console {
     }
 
 
-    /**
+    */
+/**
      * Main UI run loop
      *
      * @throws CustomExceptions in case of invalid input
-     */
+     *//*
+
     public void run() throws CustomExceptions, SQLException {
         Scanner scanner = new Scanner(System.in);
 
@@ -407,3 +444,4 @@ public class Console {
     }
 }
 
+*/

@@ -67,6 +67,10 @@ public class ViewController {
     @FXML
     private javafx.scene.control.TextField teacherCourseIdTextField;
 
+    /**
+     * Student Window
+     * @throws IOException in case of wrong fxml file
+     */
     public void renderStudentWindow() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("student-view.fxml"));
         Parent root1 = fxmlLoader.load();
@@ -78,6 +82,10 @@ public class ViewController {
         stage.show();
     }
 
+    /**
+     * Teacher Window
+     * @throws IOException in case of wrong fxml file
+     */
     public void renderTeacherWindow() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("teacher-view.fxml"));
         Parent root1 = fxmlLoader.load();
@@ -89,8 +97,13 @@ public class ViewController {
         stage.show();
     }
 
+    /**
+     * Login Method
+     * Checks for choiceBox
+     * and logs into teacher or student
+     */
     @FXML
-    public void logInButtonClicked() throws SQLException, IOException {
+    public void logInButtonClicked() {
         try {
             int id = Integer.parseInt(idTextBox.getText());
             if (Objects.equals(choiceBox.getValue().toString(), "Student")) {
@@ -108,6 +121,9 @@ public class ViewController {
         }
     }
 
+    /**
+     * Show Student Credits Method
+     */
     @FXML
     public void onSeeCreditsButtonClicked() {
         int credits = tempStudent.getTotalCredits();
@@ -115,12 +131,19 @@ public class ViewController {
 
     }
 
+    /**
+     * Close window Method
+     */
     @FXML
     public void closeButtonAction() {
         Stage stage = (Stage) closeButton.getScene().getWindow();
         stage.close();
     }
 
+    /**
+     * Show Courses Method for Student
+     * @throws SQLException when course not found
+     */
     @FXML
     public void onShowCoursesButtonClicked() throws SQLException {
         ListView<Course> courseListView = new ListView<>();
@@ -131,6 +154,9 @@ public class ViewController {
         showCoursesListView.setItems(courseListView.getItems());
     }
 
+    /**
+     * Show Enrolled Courses Method for Student
+     */
     @FXML
     public void onShowEnrolledCoursesButtonClicked() {
         ListView<Integer> courseListView = new ListView<>();
@@ -142,6 +168,9 @@ public class ViewController {
         showEnrolledCoursesListView.setItems(courseListView.getItems());
     }
 
+    /**
+     * Enroll Student Method for Button
+     */
     @FXML
     public void onEnrollStudentButtonClicked() {
         try {
@@ -157,6 +186,10 @@ public class ViewController {
         }
     }
 
+    /**
+     * See Courses Method for Button
+     * @throws SQLException
+     */
     @FXML
     public void onSeeCoursesButtonClicked() throws SQLException {
         ListView<Course> courseListView = new ListView<>();
@@ -167,6 +200,9 @@ public class ViewController {
         showTeacherCoursesListView.setItems(courseListView.getItems());
     }
 
+    /**
+     * See Enrolled Students Method for Button
+     */
     @FXML
     public void onSeeEnrolledStudentsButtonClicked() {
         try {
